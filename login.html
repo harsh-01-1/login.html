@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Test</title>
+</head>
+<body>
+
+<h2>Login</h2>
+<form onsubmit="return loginUser()">
+  <input type="text" id="username" placeholder="Username" required><br><br>
+  <input type="password" id="password" placeholder="Password" required><br><br>
+  <button type="submit">Login</button>
+</form>
+
+<p id="message" style="color:red;"></p>
+
+<script>
+function loginUser() {
+  var user = document.getElementById("username").value;
+  var pass = document.getElementById("password").value;
+
+  if (user === "HARSHU" && pass === "HARSHKING") {
+    window.location.href = "http://fi8.bot-hosting.net:21157/";
+  } else {
+    document.getElementById("message").textContent = "Invalid login details.";
+  }
+
+  return false;
+}
+</script>
+
+</body>
+</html>
